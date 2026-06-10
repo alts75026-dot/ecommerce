@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla E-Commerce</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Using a placeholder icon font for the cart -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <main>
+        <section class="hero" id="hero">
+            <header class="custom-navbar">
+                <div class="nav-left">
+                    <button id="menu-toggle" aria-label="Open Menu" class="nav-action"><i class="fas fa-bars"></i> Menu</button>
+                </div>
+                <div class="nav-center">
+                    <a href="#" class="home-link">Dear Collection</a>
+                </div>
+                <div class="nav-right">
+                    <button id="signin-toggle" aria-label="Sign In" class="nav-action signin-link"><i class="fas fa-user-circle"></i> Sign In</button>
+                    <button id="cart-toggle" aria-label="Toggle Cart" class="nav-action"><i class="fas fa-shopping-bag"></i> Cart <span id="cart-count">0</span></button>
+                </div>
+            </header>
+            <div class="hero-text-inner">
+                <span class="hero-label">Luxe Essentials</span>
+                <h1>Refined Style, Redefined</h1>
+                <p>Discover curated pieces that blend modern luxury with effortless elegance for every day.</p>
+                <a href="#categories" class="hero-btn">Shop</a>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section id="categories" class="categories-section">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="category-grid">
+                <a href="shirts.html" class="category-link">
+                <div class="category-card">
+                    <img src="shirt.png" alt="Shirts">
+                    <div class="category-overlay"><h3>Shirts</h3></div>
+                </div>
+                </a>
+                <a href="pants.html" class="category-link">
+                <div class="category-card">
+                    <img src="pant.png" alt="Pants">
+                    <div class="category-overlay"><h3>Pants</h3></div>
+                </div>
+                </a>
+                <a href="tshirts.html" class="category-link">
+                <div class="category-card">
+                    <img src="tshirt.png" alt="T-Shirts">
+                    <div class="category-overlay"><h3>T-Shirts</h3></div>
+                </div>
+                </a>
+                <a href="trousers.html" class="category-link">
+                <div class="category-card">
+                    <img src="trouser.png" alt="Trousers">
+                    <div class="category-overlay"><h3>Trousers</h3></div>
+                </div>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Menu Sidebar -->
+    <aside id="menu-sidebar" class="menu-sidebar">
+        <div class="menu-header">
+            <h3>Menu</h3>
+            <button id="close-menu" aria-label="Close Menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="menu-links">
+            <a href="index.html" class="menu-home">Home</a>
+            <a href="shirts.html" class="menu-category">Shirt</a>
+            <a href="pants.html" class="menu-category">Pant</a>
+            <a href="tshirts.html" class="menu-category">T-Shirt</a>
+            <a href="trousers.html" class="menu-category">Trouser</a>
+        </nav>
+    </aside>
+
+    <!-- Cart Sidebar -->
+    <aside id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button id="close-cart" aria-label="Close Cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="cart-items" class="cart-items">
+            <!-- Cart items will be dynamically inserted here -->
+        </div>
+        <div class="cart-footer">
+            <div class="total">
+                <span>Total:</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </aside>
+
+    <!-- Shared Overlay -->
+    <div id="shared-overlay" class="overlay"></div>
+
+    <!-- Sign In / Create Account Modal -->
+    <div id="signin-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="close-modal" class="close-modal-btn"><i class="fas fa-times"></i></button>
+            <div class="modal-header">
+                <h3 id="modal-title">Sign In</h3>
+            </div>
+            <div class="modal-body">
+                <form id="auth-form" class="auth-form">
+                    <div class="form-group" id="name-group" style="display: none;">
+                        <label for="auth-name">Full Name</label>
+                        <input type="text" id="auth-name" placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="auth-email">Email</label>
+                        <input type="email" id="auth-email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="auth-password">Password</label>
+                        <input type="password" id="auth-password" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="auth-submit-btn" id="auth-submit-btn">Sign In</button>
+                </form>
+                <div class="modal-footer">
+                    <p id="auth-toggle-text">Don't have an account? <button id="auth-toggle-btn" type="button">Create one</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Payment & Address Modal -->
+    <div id="checkout-modal" class="modal-overlay">
+        <div class="modal-content checkout-modal-content">
+            <button id="close-checkout-modal" class="close-modal-btn"><i class="fas fa-times"></i></button>
+            <div class="modal-header">
+                <h3>Complete Your Order</h3>
+            </div>
+            <div class="modal-body checkout-body">
+                <form id="checkout-form" class="checkout-form">
+                    <!-- Delivery Address Section -->
+                    <div class="checkout-section">
+                        <h4 class="section-title"><i class="fas fa-map-marker-alt"></i> Delivery Address</h4>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="checkout-name">Full Name</label>
+                                <input type="text" id="checkout-name" placeholder="Your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout-phone">Phone Number</label>
+                                <input type="tel" id="checkout-phone" placeholder="Your phone number" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkout-email">Email</label>
+                            <input type="email" id="checkout-email" placeholder="Your email address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkout-address">Address</label>
+                            <input type="text" id="checkout-address" placeholder="Street address" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="checkout-city">City</label>
+                                <input type="text" id="checkout-city" placeholder="City" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout-postal">Postal Code</label>
+                                <input type="text" id="checkout-postal" placeholder="Postal Code" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Method Section -->
+                    <div class="checkout-section">
+                        <h4 class="section-title"><i class="fas fa-credit-card"></i> Payment Method</h4>
+                        <div class="payment-options">
+                            <label class="payment-option">
+                                <input type="radio" name="payment-method" value="card" checked>
+                                <span class="payment-label">Credit/Debit Card</span>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment-method" value="upi">
+                                <span class="payment-label">UPI</span>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment-method" value="wallet">
+                                <span class="payment-label">Digital Wallet</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Card Payment Details -->
+                    <div class="checkout-section" id="card-details" style="display: block;">
+                        <h4 class="section-title">Card Details</h4>
+                        <div class="form-group">
+                            <label for="checkout-cardname">Cardholder Name</label>
+                            <input type="text" id="checkout-cardname" placeholder="Name on card" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkout-cardnumber">Card Number</label>
+                            <input type="text" id="checkout-cardnumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="checkout-expiry">Expiry Date</label>
+                                <input type="text" id="checkout-expiry" placeholder="MM/YY" maxlength="5" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout-cvv">CVV</label>
+                                <input type="text" id="checkout-cvv" placeholder="123" maxlength="4" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- UPI Payment Details -->
+                    <div class="checkout-section" id="upi-details" style="display: none;">
+                        <h4 class="section-title">UPI Details</h4>
+                        <div class="form-group">
+                            <label for="checkout-upi">UPI ID</label>
+                            <input type="text" id="checkout-upi" placeholder="yourname@upi" required>
+                        </div>
+                    </div>
+
+                    <!-- Order Summary -->
+                    <div class="checkout-section order-summary">
+                        <h4 class="section-title">Order Summary</h4>
+                        <div class="summary-row">
+                            <span>Subtotal:</span>
+                            <span id="checkout-subtotal">$0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping:</span>
+                            <span id="checkout-shipping">$10.00</span>
+                        </div>
+                        <div class="summary-row total-row">
+                            <span>Total:</span>
+                            <span id="checkout-total">$0.00</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="checkout-submit-btn">Complete Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

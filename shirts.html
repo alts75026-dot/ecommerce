@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shirts - Dear Clothes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="shirts-page">
+    <header class="custom-navbar category-navbar">
+        <div class="nav-left">
+            <button id="menu-toggle" aria-label="Open Menu" class="nav-action"><i class="fas fa-bars"></i> Menu</button>
+        </div>
+        <div class="nav-center">
+            <a href="index.html" class="home-link">Dear Clothes</a>
+        </div>
+        <div class="nav-right">
+            <button id="cart-toggle" aria-label="Toggle Cart" class="nav-action"><i class="fas fa-shopping-bag"></i> Cart <span id="cart-count">0</span></button>
+        </div>
+    </header>
+
+    <main class="category-page">
+        <section class="product-grid">
+            <article class="product-card">
+                <img src="https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=800&q=80" alt="Classic Linen Shirt">
+                <h3>Classic Linen Shirt</h3>
+                <p>Lightweight, breathable, perfect for summer.</p>
+                <div class="product-price">$39.99</div>
+                <button class="add-to-cart-btn">Add to cart</button>
+            </article>
+            <article class="product-card">
+                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80" alt="Striped Casual Shirt">
+                <h3>Striped Casual Shirt</h3>
+                <p>Modern fit with a subtle stripe pattern.</p>
+                <div class="product-price">$34.99</div>
+                <button class="add-to-cart-btn">Add to cart</button>
+            </article>
+            <article class="product-card">
+                <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80" alt="Formal Dress Shirt">
+                <h3>Formal Dress Shirt</h3>
+                <p>Sharp tailoring for meetings and events.</p>
+                <div class="product-price">$49.99</div>
+                <button class="add-to-cart-btn">Add to cart</button>
+            </article>
+            <article class="product-card">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80" alt="Oxford Button-Down">
+                <h3>Oxford Button-Down</h3>
+                <p>Classic office-ready style in soft cotton.</p>
+                <div class="product-price">$44.99</div>
+                <button class="add-to-cart-btn">Add to cart</button>
+            </article>
+            <article class="product-card">
+                <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=800&q=80" alt="Chambray Shirt">
+                <h3>Chambray Shirt</h3>
+                <p>Casual texture with a refined finish.</p>
+                <div class="product-price">$42.99</div>
+                <button class="add-to-cart-btn">Add to cart</button>
+            </article>
+            <article class="product-card">
+                <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=800&q=80" alt="Denim Work Shirt">
+                <h3>Denim Work Shirt</h3>
+                <p>Durable denim with a cool washed look.</p>
+                <div class="product-price">$46.99</div>
+                <button class="add-to-cart-btn">Add to cart</button>
+            </article>
+            <article class="product-card">
+                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80" alt="Flannel Plaid Shirt">
+                <h3>Flannel Plaid Shirt</h3>
+                <p>Warm and comfortable for cooler days.</p>
+                <div class="product-price">$37.99</div>
+                <button class="add-to-cart-btn">Add to cart</button>
+            </article>
+            <article class="product-card">
+                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80" alt="Denim Shirt">
+                <h3>Denim Shirt</h3>
+                <p>Stylish layering piece with a relaxed fit.</p>
+                <div class="product-price">$43.99</div>
+                <button class="add-to-cart-btn">Add to cart</button>
+            </article>
+            <article class="product-card">
+                <img src="https://images.unsplash.com/photo-1521335629791-ce4aec67dd3a?auto=format&fit=crop&w=800&q=80" alt="Evening Satin Shirt">
+                <h3>Evening Satin Shirt</h3>
+                <p>Luxurious sheen for evening dressing.</p>
+                <div class="product-price">$54.99</div>
+                <button class="add-to-cart-btn">Add to cart</button>
+            </article>
+            <article class="product-card">
+                <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=800&q=80" alt="Soft Stretch Shirt">
+                <h3>Soft Stretch Shirt</h3>
+                <p>Comfort stretch fabric for ease of movement.</p>
+                <div class="product-price">$41.99</div>
+                <button class="add-to-cart-btn">Add to cart</button>
+            </article>
+        </section>
+    </main>
+
+    <aside id="menu-sidebar" class="menu-sidebar">
+        <div class="menu-header">
+            <h3>Menu</h3>
+            <button id="close-menu" aria-label="Close Menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="menu-links">
+            <a href="index.html" class="menu-home">Home</a>
+            <a href="shirts.html" class="menu-category">Shirt</a>
+            <a href="pants.html" class="menu-category">Pant</a>
+            <a href="tshirts.html" class="menu-category">T-Shirt</a>
+            <a href="trousers.html" class="menu-category">Trouser</a>
+        </nav>
+    </aside>
+
+    <aside id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Cart & Sign In</h3>
+            <button id="close-cart" aria-label="Close Cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-sidebar-content">
+            <section class="signin-panel">
+                <div class="signin-panel-header">
+                    <h4>Sign in</h4>
+                    <p>Use your account to save your cart and checkout faster.</p>
+                </div>
+                <form class="signin-form">
+                    <label for="signin-email">Email</label>
+                    <input id="signin-email" type="email" placeholder="you@example.com" required>
+                    <label for="signin-password">Password</label>
+                    <input id="signin-password" type="password" placeholder="Enter your password" required>
+                    <button type="submit" class="signin-btn">Sign In</button>
+                    <button type="button" class="guest-btn">Continue as Guest</button>
+                </form>
+            </section>
+            <section class="cart-panel">
+                <div id="cart-items" class="cart-items"></div>
+                <div class="cart-footer">
+                    <div class="total">
+                        <span>Total:</span>
+                        <span id="cart-total">$0.00</span>
+                    </div>
+                    <button class="checkout-btn">Checkout</button>
+                </div>
+            </section>
+        </div>
+    </aside>
+
+    <div id="shared-overlay" class="overlay"></div>
+    
+    <!-- Checkout Payment & Address Modal -->
+    <div id="checkout-modal" class="modal-overlay">
+        <div class="modal-content checkout-modal-content">
+            <button id="close-checkout-modal" class="close-modal-btn"><i class="fas fa-times"></i></button>
+            <div class="modal-header">
+                <h3>Complete Your Order</h3>
+            </div>
+            <div class="modal-body checkout-body">
+                <form id="checkout-form" class="checkout-form">
+                    <!-- Delivery Address Section -->
+                    <div class="checkout-section">
+                        <h4 class="section-title"><i class="fas fa-map-marker-alt"></i> Delivery Address</h4>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="checkout-name">Full Name</label>
+                                <input type="text" id="checkout-name" placeholder="Your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout-phone">Phone Number</label>
+                                <input type="tel" id="checkout-phone" placeholder="Your phone number" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkout-email">Email</label>
+                            <input type="email" id="checkout-email" placeholder="Your email address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkout-address">Address</label>
+                            <input type="text" id="checkout-address" placeholder="Street address" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="checkout-city">City</label>
+                                <input type="text" id="checkout-city" placeholder="City" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout-postal">Postal Code</label>
+                                <input type="text" id="checkout-postal" placeholder="Postal Code" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Method Section -->
+                    <div class="checkout-section">
+                        <h4 class="section-title"><i class="fas fa-credit-card"></i> Payment Method</h4>
+                        <div class="payment-options">
+                            <label class="payment-option">
+                                <input type="radio" name="payment-method" value="card" checked>
+                                <span class="payment-label">Credit/Debit Card</span>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment-method" value="upi">
+                                <span class="payment-label">UPI</span>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment-method" value="wallet">
+                                <span class="payment-label">Digital Wallet</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Card Payment Details -->
+                    <div class="checkout-section" id="card-details" style="display: block;">
+                        <h4 class="section-title">Card Details</h4>
+                        <div class="form-group">
+                            <label for="checkout-cardname">Cardholder Name</label>
+                            <input type="text" id="checkout-cardname" placeholder="Name on card" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkout-cardnumber">Card Number</label>
+                            <input type="text" id="checkout-cardnumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="checkout-expiry">Expiry Date</label>
+                                <input type="text" id="checkout-expiry" placeholder="MM/YY" maxlength="5" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout-cvv">CVV</label>
+                                <input type="text" id="checkout-cvv" placeholder="123" maxlength="4" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- UPI Payment Details -->
+                    <div class="checkout-section" id="upi-details" style="display: none;">
+                        <h4 class="section-title">UPI Details</h4>
+                        <div class="form-group">
+                            <label for="checkout-upi">UPI ID</label>
+                            <input type="text" id="checkout-upi" placeholder="yourname@upi" required>
+                        </div>
+                    </div>
+
+                    <!-- Order Summary -->
+                    <div class="checkout-section order-summary">
+                        <h4 class="section-title">Order Summary</h4>
+                        <div class="summary-row">
+                            <span>Subtotal:</span>
+                            <span id="checkout-subtotal">$0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping:</span>
+                            <span id="checkout-shipping">$10.00</span>
+                        </div>
+                        <div class="summary-row total-row">
+                            <span>Total:</span>
+                            <span id="checkout-total">$0.00</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="checkout-submit-btn">Complete Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script type="module" src="script.js"></script>
+</body>
+</html>
